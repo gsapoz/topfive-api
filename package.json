@@ -1,8 +1,9 @@
 {
   "name": "topfive-api",
   "version": "1.0.0",
-  "description": "Information on Fotmob player data for football's top 5 leagues.",
-  "main": "index.js",
+  "description": "Information on soccer player data for football's top 5 leagues.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
