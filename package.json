@@ -3,14 +3,37 @@
   "version": "1.0.0",
   "description": "Information on soccer player data for football's top 5 leagues.",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "types": "lib",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p .",
+    "start": "npm run build; node lib/index.js",
+    "test": "npm run build, mocha lib/test"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "soccer",
+    "football",
+    "teams",
+    "clubs",
+    "leagues",
+    "divisions",
+    "players",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Gary Sapozhnikov",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.2"
+  },
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gsapoz/topfive-api"
+  },
+  "homepage": "https://github.com/gsapoz/topfive-api",
+  "devDependencies": {
+    "@types/jest": "^29.5.0"
   }
 }
