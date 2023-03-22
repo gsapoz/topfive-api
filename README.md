@@ -1,2 +1,2 @@
 # topfive-api
-Information on Fotmob player data for football's top 5 leagues. 
+Information on soccer data for football's top 5 leagues. 
