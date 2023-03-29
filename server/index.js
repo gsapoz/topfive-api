@@ -55,20 +55,19 @@ function getPlayersFromClub(club) {
   }
 }
 
-function getPlayerAttributes(player) {
+function getPlayerAttributes(name) {
   const data = loadJSON("../topfive.json");
-  player = upperCase(player);
+  name = upperCase(name);
 
-  data.forEach((league) => {
-    league.clubs.forEach((club) => {
-      club.players.forEach((player) => {
-        if (player.name == "Mason Mount") {
-          return player;
+  for (let i = 0; i < data.length; i++) {
+    for (let j = 0; j < data[i].clubs.length; j++) {
+      for (let k = 0; k < data[i].clubs[j].players.length; k++) {
+        if (data[i].clubs[j].players[k].name == "Mason Mount") {
+          return data[i].clubs[j].players[k];
         }
-        // console.log(player.name);
-      });
-    });
-  });
+      }
+    }
+  }
 }
 
 function getClubAttributes(club) {
@@ -122,7 +121,20 @@ function getClubImage(club) {
   }
 }
 
-function getPlayerImage(player) {}
+function getPlayerImage(name) {
+  const data = loadJSON("../topfive.json");
+  name = upperCase(name);
+
+  for (let i = 0; i < data.length; i++) {
+    for (let j = 0; j < data[i].clubs.length; j++) {
+      for (let k = 0; k < data[i].clubs[j].players.length; k++) {
+        if (data[i].clubs[j].players[k].name == "Mason Mount") {
+          return data[i].clubs[j].players[k].image;
+        }
+      }
+    }
+  }
+}
 
 module.exports = {
   getClubsFromLeague,
@@ -133,4 +145,5 @@ module.exports = {
   getClubAttributes,
   getPlayersFromClub,
   getPlayerAttributes,
+  getPlayerImage,
 };
