@@ -55,7 +55,21 @@ function getPlayersFromClub(club) {
   }
 }
 
-function getPlayerAttributes(player) {}
+function getPlayerAttributes(player) {
+  const data = loadJSON("../topfive.json");
+  player = upperCase(player);
+
+  data.forEach((league) => {
+    league.clubs.forEach((club) => {
+      club.players.forEach((player) => {
+        if (player.name == "Mason Mount") {
+          return player;
+        }
+        // console.log(player.name);
+      });
+    });
+  });
+}
 
 function getClubAttributes(club) {
   const data = loadJSON("../topfive.json");
@@ -118,4 +132,5 @@ module.exports = {
   getLeagueAttributes,
   getClubAttributes,
   getPlayersFromClub,
+  getPlayerAttributes,
 };
