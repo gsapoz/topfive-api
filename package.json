@@ -2,7 +2,7 @@
   "name": "topfive-api",
   "version": "1.0.2",
   "description": "Premier League 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Bundesliga 🇩🇪 Serie A 🇮🇹 Ligue 1 🇫🇷 La Liga 🇪🇸 \n All the clubs, all the players, automatically updated every transfer window.",
-  "main": "server/index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
