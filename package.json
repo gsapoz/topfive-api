@@ -1,15 +1,42 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
+  "name": "topfive-api",
+  "version": "1.0.2",
+  "description": "Premier League 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Bundesliga 🇩🇪 Serie A 🇮🇹 Ligue 1 🇫🇷 La Liga 🇪🇸 \n All the clubs, all the players, automatically updated every transfer window.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "fs": "^0.0.1"
+  "keywords": [
+    "soccer",
+    "football",
+    "la liga",
+    "serie a",
+    "premier league",
+    "bundesliga",
+    "ligue 1",
+    "fifa",
+    "uefa",
+    "world cup",
+    "euros",
+    "players",
+    "sports",
+    "teams",
+    "javascript",
+    "json",
+    "node",
+    "easy",
+    "install",
+    "to use"
+  ],
+  "author": "Gary Sapozhnikov",
+  "license": "MIT",
+  "private": false,
+  "homepage": "https://github.com/gsapoz/topfive-api",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsapoz/topfive-api.git"
+  },
+  "directories": {
+    "test": "test"
   }
 }

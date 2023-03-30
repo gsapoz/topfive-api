@@ -1,4 +1,5 @@
 const fs = require("fs");
+const data = loadJSON("/topfive.json");
 
 function loadJSON(filename) {
   const data = fs.readFileSync(filename, "utf8");
@@ -15,7 +16,6 @@ function upperCase(query) {
 }
 
 function getAllClubs() {
-  const data = loadJSON("../topfive.json");
   let clubs = data[0].clubs;
 
   clubs = clubs.concat(
@@ -29,7 +29,6 @@ function getAllClubs() {
 }
 
 function getClubsFromLeague(league) {
-  const data = loadJSON("../topfive.json");
   league = upperCase(league);
   let clubs = "";
 
@@ -43,7 +42,6 @@ function getClubsFromLeague(league) {
 }
 
 function getPlayersFromClub(club) {
-  const data = loadJSON("../topfive.json");
   club = upperCase(club);
 
   for (let i = 0; i < data.length; i++) {
@@ -56,13 +54,12 @@ function getPlayersFromClub(club) {
 }
 
 function getPlayerAttributes(name) {
-  const data = loadJSON("../topfive.json");
   name = upperCase(name);
 
   for (let i = 0; i < data.length; i++) {
     for (let j = 0; j < data[i].clubs.length; j++) {
       for (let k = 0; k < data[i].clubs[j].players.length; k++) {
-        if (data[i].clubs[j].players[k].name == "Mason Mount") {
+        if (data[i].clubs[j].players[k].name == name) {
           return data[i].clubs[j].players[k];
         }
       }
@@ -71,7 +68,6 @@ function getPlayerAttributes(name) {
 }
 
 function getClubAttributes(club) {
-  const data = loadJSON("../topfive.json");
   club = upperCase(club);
 
   for (let i = 0; i < data.length; i++) {
@@ -84,7 +80,6 @@ function getClubAttributes(club) {
 }
 
 function getLeagueAttributes(league) {
-  const data = loadJSON("../topfive.json");
   league = upperCase(league);
 
   for (let i = 0; i < data.length; i++) {
@@ -95,7 +90,6 @@ function getLeagueAttributes(league) {
 }
 
 function getLeagueImage(league) {
-  const data = loadJSON("../topfive.json");
   league = upperCase(league);
   let clubs = "";
 
@@ -107,7 +101,6 @@ function getLeagueImage(league) {
 }
 
 function getClubImage(club) {
-  const data = loadJSON("../topfive.json");
   club = upperCase(club);
 
   for (let i = 0; i < data.length; i++) {
@@ -122,13 +115,13 @@ function getClubImage(club) {
 }
 
 function getPlayerImage(name) {
-  const data = loadJSON("../topfive.json");
+  const data = loadJSON("././topfive.json");
   name = upperCase(name);
 
   for (let i = 0; i < data.length; i++) {
     for (let j = 0; j < data[i].clubs.length; j++) {
       for (let k = 0; k < data[i].clubs[j].players.length; k++) {
-        if (data[i].clubs[j].players[k].name == "Mason Mount") {
+        if (data[i].clubs[j].players[k].name == name) {
           return data[i].clubs[j].players[k].image;
         }
       }
