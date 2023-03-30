@@ -1,5 +1,5 @@
 const fs = require("fs");
-const data = loadJSON("/topfive.json");
+const data = loadJSON("../topfive.json");
 
 function loadJSON(filename) {
   const data = fs.readFileSync(filename, "utf8");
@@ -115,7 +115,6 @@ function getClubImage(club) {
 }
 
 function getPlayerImage(name) {
-  const data = loadJSON("././topfive.json");
   name = upperCase(name);
 
   for (let i = 0; i < data.length; i++) {

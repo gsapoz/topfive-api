@@ -8,7 +8,7 @@ const {
   getPlayersFromClub,
   getPlayerAttributes,
   getPlayerImage,
-} = require("../index");
+} = require("../src/index");
 
 const PL_Clubs = getClubsFromLeague("premier league"); //returns all clubs from the PL, in one json object
 const All_Clubs = getAllClubs(); //returns all clubs in the list, concatanated together in one json object
@@ -20,4 +20,4 @@ const Club_Props = getClubAttributes("Villarreal CF"); //returns club name, cres
 const Sevilla_Players = getPlayersFromClub("Sevilla FC"); //returns a json object of all Sevilla players
 const Player_Props = getPlayerAttributes("Mason Mount"); //returns the name, position, age, height, weight, and image
 
-console.log(Player_Image);
+console.log(All_Clubs);
